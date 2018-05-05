@@ -9,6 +9,7 @@
 
 * [Introduction](#introduction)
 * [Build Instructions](#build-instructions)
+* [How To Install](#how-to-install)
 * [Crash Course: entity-component system](#crash-course-entity-component-system)
    * [Design choices](#design-choices)
       * [A bitset-free entity-component system](#a-bitset-free-entity-component-system)
@@ -51,7 +52,6 @@
    * [Delegate](#delegate)
    * [Event dispatcher](#event-dispatcher)
    * [Event emitter](#event-emitter)
-* [Packaging Tools](#packaging-tools)
 * [EnTT in Action](#entt-in-action)
 * [License](#license)
 * [Support](#support)
@@ -314,6 +314,25 @@ To build the most basic set of tests:
 * `$ make test`
 
 Note that benchmarks are not part of this set.
+
+# How To Install
+
+`EnTT` is available for some of the most known packaging tools. In particular:
+
+* [`vcpkg`](https://github.com/Microsoft/vcpkg),
+  Microsoft VC++ Packaging Tool.
+  ```
+  vcpkg install entt
+  ```
+
+* [`Homebrew`](https://github.com/skypjack/homebrew-entt), the missing package
+  manager for macOS.<br/>
+  Available as a homebrew formula. Just type the following to install it:
+  ```
+  brew install skypjack/entt/entt
+  ```
+
+Consider this list a work in progress and help me to make it longer.
 
 # Crash Course: entity-component system
 
@@ -2455,21 +2474,6 @@ In general, the event emitter is a handy tool when the derived classes _wrap_
 asynchronous operations, because it introduces a _nice-to-have_ model based on
 events and listeners that kindly hides the complexity behind the scenes. However
 it is not limited to such uses.
-
-# Packaging Tools
-
-`EnTT` is available for some of the most known packaging tools. In particular:
-
-* [`vcpkg`](https://github.com/Microsoft/vcpkg/tree/master/ports/entt),
-  Microsoft VC++ Packaging Tool.
-* [`Homebrew`](https://github.com/skypjack/homebrew-entt), the missing package
-  manager for macOS.<br/>
-  Available as a homebrew formula. Just type the following to install it:
-  ```
-  brew install skypjack/entt/entt
-  ```
-
-Consider this list a work in progress and help me to make it longer.
 
 # EnTT in Action
 
